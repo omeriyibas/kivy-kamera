@@ -1,0 +1,30 @@
+#:import PreviewCamera component.PreviewCamera
+<CameraScreen>
+    PreviewCamera:
+##        aspect_ratio: '1:1'
+        id:preview
+#
+    MDBoxLayout:
+#        md_bg_color:"red"
+        size_hint_y:.15
+        size_hint_x:.3
+        pos_hint:{'center_x':.5,'y':.1}
+        MDBoxLayout:
+#            md_bg_color:"red"
+            orientation:"vertical"
+
+            MDBoxLayout:
+#                md_bg_color:"blue"
+                adaptive_width:True
+                pos_hint:{'center_x':.5}
+
+                MDFillRoundFlatButton:
+                    width:dp(100)
+                    height:dp(100)
+    #                size_hint_x:1
+    #                size_hint_y:1
+
+                    pos_hint:{'center_y':.5}
+
+                    id:shot_btn
+                    md_bg_color:"white"
